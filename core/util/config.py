@@ -20,6 +20,17 @@ TEST_DIR = pjoin(ROOT_DIR, 'test')
 
 DATA_TEST = pjoin(DATA_DIR, 'test')
 
+DATA_ROOT = '/home/shijiang/data/datasets/'
+DATA_PPM_ROOT = pjoin(DATA_ROOT, 'all_ppm')
+DATA_HESSIAN_ROOT = pjoin(DATA_ROOT, 'all_heaff')
+DATASET_HOLIDAY = 'holidays'
+DATASET_OXFORD = 'oxford'
+DATASET_UKB = 'ukb'
+DATASET_PARIS = 'paris'
+DATASETS = [DATASET_HOLIDAY, DATASET_OXFORD, DATASET_UKB, DATASET_PARIS]
+
+
+
 
 def print_path(dir_name):
     print osp.abspath(dir_name)
