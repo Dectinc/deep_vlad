@@ -14,11 +14,6 @@ from core.util.config import pjoin, DATASETS, DATA_ROOT, DATA_PPM_ROOT
 
 logger = LoggerUtil.get_logger(__file__.split('/')[-1][:-3])
 
-__DEFAULT_ROOT__ = '/home/shijiang/data/datasets/'
-__DEFAULTS__ = {
-    ''
-}
-
 
 @util.walk
 def convert_image(_from, _to):

@@ -32,6 +32,9 @@ def walk(func):
                 else:
                     _filename, _origin_ext = os.path.splitext(_from_file)
                     _to_file = '{}.{}'.format(_filename, _ext)
+                if os.path.exists(_to_file):
+                    logger.info('skip for exists: {}'.format(_to_file))
+                    continue
                 func(_from_file, _to_file)
 
     return walk_wrapper
