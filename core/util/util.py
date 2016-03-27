@@ -30,8 +30,8 @@ def walk(func):
                 if not _ext:
                     _to_file = pjoin(to_dir, _file)
                 else:
-                    _filename, _origin_ext = os.path.splitext(_from_file)
-                    _to_file = '{}.{}'.format(_filename, _ext)
+                    _filename, _origin_ext = os.path.splitext(_file)
+                    _to_file = '{}.{}'.format(to_dir, _filename, _ext)
                 if os.path.exists(_to_file):
                     logger.info('skip for exists: {}'.format(_to_file))
                     continue
