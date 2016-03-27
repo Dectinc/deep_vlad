@@ -1,0 +1,3 @@
+[submodule "reference/city_judge"]
+	path = reference/city_judge
+	url = git@github.com:Dectinc/city_judge.git
