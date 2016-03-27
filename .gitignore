@@ -9,6 +9,8 @@ doc/notes
 
 data/test
 
+env_deep_vlad
+
 log/*
 
 !*/.keep
