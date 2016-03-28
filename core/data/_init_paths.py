@@ -16,5 +16,5 @@ def add_path(path):
 
 this_dir = osp.dirname(__file__)
 
-caffe_path = osp.join(this_dir, '..')
-add_path(caffe_path)
+root_dir = osp.abspath(osp.join(this_dir, '..', '..'))
+add_path(root_dir)
