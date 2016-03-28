@@ -20,6 +20,10 @@ def walk(func):
             path_from += os.sep
         logger.info('Walk in {}'.format(path_from))
         logger.info('Results to {}'.format(path_to))
+        _prefix = os.path.commonprefix([os.path.split(path_from),
+                                        os.path.split(path_to)])
+        len_prefix = len(os.path.sep.join(_prefix))
+        logger.info('Common prefix: {}'.format(_prefix))
         for cur_dir, dir_list, file_list in os.walk(path_from):
             dir_name = cur_dir[len(path_from):]
             to_dir = pjoin(path_to, dir_name)
@@ -38,7 +42,9 @@ def walk(func):
                 try:
                     func(_from_file, _to_file)
                     logger.info('[{}] from {} to {}'.format(
-                        func.func_name, _from_file, _to_file
+                        func.func_name,
+                        '${{FROM}}{}'.format(_from_file[len_prefix:]),
+                        '${{TO}}{}'.format(_to_file[len_prefix:])
                     ))
                 except Exception, e:
                     logger.info('Failed [{}] {}, error msg: {}'.format(
