@@ -35,7 +35,15 @@ def walk(func):
                 if os.path.exists(_to_file):
                     logger.info('skip for exists: {}'.format(_to_file))
                     continue
-                func(_from_file, _to_file)
+                try:
+                    func(_from_file, _to_file)
+                    logger.info('[{}] from {} to {}'.format(
+                        func.func_name, _from_file, _to_file
+                    ))
+                except Exception, e:
+                    logger.info('Failed [{}] {}, error msg: {}'.format(
+                        func.func_name, _from_file, str(e)
+                    ))
 
     return walk_wrapper
 
