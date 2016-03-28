@@ -1,6 +1,6 @@
 [submodule "reference/city_judge"]
 	path = reference/city_judge
-	url = git@github.com:Dectinc/city_judge.git
+	url = git@166.111.82.128:shijiang/city-judge.git
 [submodule "reference/py-faster-rcnn"]
 	path = reference/py-faster-rcnn
 	url = git@166.111.82.128:shijiang/py-faster-rcnn.git
