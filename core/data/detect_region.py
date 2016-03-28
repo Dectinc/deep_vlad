@@ -23,10 +23,10 @@ def detect_region(_from, _to):
     >> ./h_affine.ln -haraff -i img1.ppm -o img1.haraff -thres 1000
     >> ./h_affine.ln -hesaff -i img1.ppm -o img1.hesaff -thres 500
     """
-    subprocess.check_call([AFFINE_DETECTOR, '-{}'.format(__affine__),
+    subprocess.call([AFFINE_DETECTOR, '-{}'.format(__affine__),
                            '-i', _from,
                            '-o', _to,
-                           '-thres', __thres__])
+                           '-thres', str(__thres__)])
 
 
 def run_default():
