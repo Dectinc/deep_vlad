@@ -30,7 +30,7 @@ DATASET_UKB = 'ukb'
 DATASET_PARIS = 'paris'
 DATASETS = [DATASET_HOLIDAY, DATASET_OXFORD, DATASET_UKB, DATASET_PARIS]
 
-AFFINE_DETECTOR = pjoin(ROOT_DIR, 'script', 'h_affine.ln')
+AFFINE_DETECTOR = pjoin(ROOT_DIR, 'tools', 'h_affine.ln')
 HARRIS_AFFINE = ('haraff', 1000)
 HESSIAN_AFFINE = ('hesaff', 500)
 
