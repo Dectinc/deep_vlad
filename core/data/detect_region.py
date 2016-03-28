@@ -5,13 +5,13 @@
 # @date     2016-03-28 00:41
 
 
+import _init_paths
 import subprocess
 import sys
 
-
 from core.util import LoggerUtil
-from core.util import util
 from core.util import config
+from core.util import util
 from core.util.config import AFFINE_DETECTOR, pjoin
 
 logger = LoggerUtil.get_logger(__file__.split('/')[-1][:-3])
@@ -27,7 +27,6 @@ def detect_region(_from, _to):
                            '-i', _from,
                            '-o', _to,
                            '-thres', __thres__])
-    logger.info('Detect region {} to {}'.format(_from, _to))
 
 
 def run_default():
@@ -39,7 +38,7 @@ def run_default():
 
 if __name__ == '__main__':
     __affine__, __thres__ = config.HESSIAN_AFFINE
-    __suffix__  = __affine__
+    __suffix__ = __affine__
     if len(sys.argv) > 1:
         detect_region(pjoin(config.DATA_PPM_ROOT, 'test'),
                       pjoin(config.DATA_REGION_ROOT, 'test'),

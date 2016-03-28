@@ -5,6 +5,7 @@
 # @date     2016-03-27 22:02 PM
 
 
+import _init_paths
 import subprocess
 import sys
 
@@ -18,7 +19,6 @@ logger = LoggerUtil.get_logger(__file__.split('/')[-1][:-3])
 @util.walk
 def convert_image(_from, _to):
     subprocess.check_call(['convert', _from, _to])
-    logger.info('Convert image {} to {}'.format(_from, _to))
 
 
 def run_default():
