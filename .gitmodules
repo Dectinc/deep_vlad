@@ -3,4 +3,5 @@
 	url = git@github.com:Dectinc/city_judge.git
 [submodule "reference/py-faster-rcnn"]
 	path = reference/py-faster-rcnn
-	url = git@github.com:Dectinc/py-faster-rcnn.git
+	url = git@166.111.82.128:shijiang/py-faster-rcnn.git
+	branch = deep_vlad
