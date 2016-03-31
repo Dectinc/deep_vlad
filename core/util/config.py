@@ -24,6 +24,7 @@ DATA_TEST = pjoin(DATA_DIR, 'test')
 DATA_ROOT = '/home/shijiang/data/datasets/'
 DATA_PPM_ROOT = pjoin(DATA_ROOT, 'all_ppm')
 DATA_REGION_ROOT = pjoin(DATA_ROOT, 'all_heaff')
+DATA_REGION_FEATURE_ROOT = pjoin(DATA_ROOT, 'all_heaff_sift')
 DATASET_HOLIDAY = 'holidays'
 DATASET_OXFORD = 'oxford'
 DATASET_UKB = 'ukb'
@@ -31,6 +32,7 @@ DATASET_PARIS = 'paris'
 DATASETS = [DATASET_HOLIDAY, DATASET_OXFORD, DATASET_UKB, DATASET_PARIS]
 
 AFFINE_DETECTOR = pjoin(ROOT_DIR, 'tools', 'h_affine.ln')
+AFFINE_EXTRACTOR = pjoin(ROOT_DIR, 'tools', 'hesaff')
 HARRIS_AFFINE = ('haraff', 1000)
 HESSIAN_AFFINE = ('hesaff', 500)
 
