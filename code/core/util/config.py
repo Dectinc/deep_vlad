@@ -10,14 +10,15 @@ from os.path import join as pjoin
 
 __TESTING__ = True
 
-ROOT_DIR = os.path.abspath(pjoin(osp.dirname(__file__), '..', '..'))
+ROOT_DIR = os.path.abspath(pjoin(osp.dirname(__file__), '..', '..', '..'))
+FASTER_RCNN_DIR = os.path.abspath(pjoin(ROOT_DIR, '..', 'py-faster-rcnn'))
 
 LOG_DIR = pjoin(ROOT_DIR, 'log')
 RESULT_DIR = pjoin(ROOT_DIR, 'result')
 DATA_DIR = pjoin(ROOT_DIR, 'data')
 CONFIG_DIR = pjoin(ROOT_DIR, 'config')
-SOURCE_DIR = pjoin(ROOT_DIR, 'core')
-TEST_DIR = pjoin(ROOT_DIR, 'test')
+SOURCE_DIR = pjoin(ROOT_DIR, 'code', 'core')
+TEST_DIR = pjoin(ROOT_DIR, 'code', 'test')
 
 DATA_TEST = pjoin(DATA_DIR, 'test')
 
@@ -37,7 +38,6 @@ HARRIS_AFFINE = ('haraff', 1000)
 HESSIAN_AFFINE = ('hesaff', 500)
 
 SUFFIX_PPM = 'ppm'
-
 
 
 def print_path(dir_name):
